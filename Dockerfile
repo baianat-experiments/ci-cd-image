@@ -27,6 +27,7 @@ RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources
 RUN apt-get update && apt-get install -y yarn
 
 # Install AWS and AWS EB CLI tools
+RUN pip3 install --upgrade PySocks
 RUN pip3 install --upgrade awscli
 RUN pip3 install --upgrade awsebcli
 
